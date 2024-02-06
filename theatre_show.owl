@@ -1,0 +1,714 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show/"
+     xml:base="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:theatre-show="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show">
+        <rdfs:comment>Ontologia sistema di gestione e rating per spettacoli teatrali.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show/cognome_attore -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show/cognome_attore"/>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show/cognome_direttore -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show/cognome_direttore"/>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show/cognome_spettatore -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show/cognome_spettatore"/>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show/haDiretto -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show/haDiretto"/>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show/haRecitato -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show/haRecitato"/>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show/haVotato -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show/haVotato"/>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show/id_Genere -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show/id_Genere"/>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show/id_Spettacolo -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show/id_Spettacolo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show/id_Spettatore -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show/id_Spettatore"/>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show/id_Teatro -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show/id_Teatro"/>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show/nome_attore -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show/nome_attore"/>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show/nome_direttore -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show/nome_direttore"/>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show/nome_spettatore -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show/nome_spettatore"/>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show/voto -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show/voto"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Situato -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Situato">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Spettacolo"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Teatro"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#haDiretto -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#haDiretto">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Direttore"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Spettacolo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#haGenere -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#haGenere">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Spettacolo"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Genere"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#haRecitato -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#haRecitato">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Attore"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Spettacolo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#haVotato -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#haVotato">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Spettatore"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Voto"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#anno_Produzione -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#anno_Produzione">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Spettacolo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#cognome_attore -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#cognome_attore">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Attore"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#cognome_direttore -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#cognome_direttore">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Direttore"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#cognome_spettatore -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#cognome_spettatore">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Spettatore"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#id_Genere -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#id_Genere">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Genere"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#id_Spettacolo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#id_Spettacolo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Spettacolo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#id_Spettatore -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#id_Spettatore">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Spettatore"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#id_Teatro -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#id_Teatro">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Teatro"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#nome_Teatro -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#nome_Teatro">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Teatro"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#nome_attore -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#nome_attore">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Attore"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#nome_direttore -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#nome_direttore">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Direttore"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#nome_spettatore -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#nome_spettatore">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Spettatore"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#ora_in_Scena -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#ora_in_Scena">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Spettacolo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#voto -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#voto">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Spettatore"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Attore -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Attore">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Spettacolo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Direttore -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Direttore">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Spettacolo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Genere -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Genere">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Spettacolo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Spettacolo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Spettacolo">
+        <rdfs:comment>Questa classe denota gli spettacoli</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Spettatore -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Spettatore">
+        <rdfs:comment>Questa classe denota lo spettatore</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Teatro -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Teatro">
+        <rdfs:comment>Questa classe denota lo spettacolo</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Voto -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Voto">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Spettatore"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Charlie_chaplin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Charlie_chaplin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Attore"/>
+        <theatre-show:haRecitato rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Charlot"/>
+        <theatre-show:cognome_attore>Chaplin</theatre-show:cognome_attore>
+        <theatre-show:nome_attore>Charlie</theatre-show:nome_attore>
+        <haRecitato rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Charlot"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Charlot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Charlot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Spettacolo"/>
+        <theatre-show:Situato rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Retroscena_Sala_2"/>
+        <theatre-show:anno_Produzione>2018</theatre-show:anno_Produzione>
+        <theatre-show:id_Genere>G2</theatre-show:id_Genere>
+        <theatre-show:id_Genere>G4</theatre-show:id_Genere>
+        <theatre-show:id_Spettacolo>S1</theatre-show:id_Spettacolo>
+        <theatre-show:ora_in_Scena>16.00</theatre-show:ora_in_Scena>
+        <id_Genere>G2</id_Genere>
+        <id_Genere>G4</id_Genere>
+        <id_Spettacolo>S1</id_Spettacolo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Fabrizio_Suma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Fabrizio_Suma">
+        <rdf:type rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Direttore"/>
+        <theatre-show:haDiretto rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Viva_Garibaldi"/>
+        <theatre-show:cognome_direttore>Suma</theatre-show:cognome_direttore>
+        <theatre-show:nome_direttore>Fabrizio</theatre-show:nome_direttore>
+        <cognome_direttore>suma</cognome_direttore>
+        <haDiretto rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Viva_Garibaldi"/>
+        <nome_direttore>fabrizio</nome_direttore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Flavio_Palma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Flavio_Palma">
+        <rdf:type rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Spettatore"/>
+        <theatre-show:haVotato rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#2"/>
+        <theatre-show:cognome_spettatore>Palma</theatre-show:cognome_spettatore>
+        <theatre-show:id_Spettatore>ID1</theatre-show:id_Spettatore>
+        <theatre-show:nome_spettatore>Flavio</theatre-show:nome_spettatore>
+        <cognome_spettatore>Palma</cognome_spettatore>
+        <haVotato rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#2"/>
+        <id_Spettatore>ID1</id_Spettatore>
+        <nome_spettatore>Flavio</nome_spettatore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#La_macchia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#La_macchia">
+        <theatre-show:Situato rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Retroscena_Sala_2"/>
+        <theatre-show:ora_in_Scena>16.00</theatre-show:ora_in_Scena>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Piero_Santoro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Piero_Santoro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Attore"/>
+        <theatre-show:haRecitato rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Viva_Garibaldi"/>
+        <theatre-show:cognome_attore>Santoro</theatre-show:cognome_attore>
+        <theatre-show:nome_attore>Piero</theatre-show:nome_attore>
+        <cognome_attore>santoro</cognome_attore>
+        <haRecitato rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Viva_Garibaldi"/>
+        <nome_attore>piero</nome_attore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Retroscena -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Retroscena">
+        <rdf:type rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Teatro"/>
+        <theatre-show:id_Teatro>T1</theatre-show:id_Teatro>
+        <theatre-show:nome_Teatro>Retroscena</theatre-show:nome_Teatro>
+        <id_Teatro>T1</id_Teatro>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Retroscena_Sala_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Retroscena_Sala_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Teatro"/>
+        <theatre-show:id_Teatro>T2</theatre-show:id_Teatro>
+        <theatre-show:nome_Teatro>Retroscena 2</theatre-show:nome_Teatro>
+        <id_Teatro>T2</id_Teatro>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Retroscena_Sala_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Retroscena_Sala_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Teatro"/>
+        <theatre-show:id_Teatro>T3</theatre-show:id_Teatro>
+        <theatre-show:nome_Teatro>Retroscena 3</theatre-show:nome_Teatro>
+        <id_Teatro>T3</id_Teatro>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Romeo_e_Giulietta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Romeo_e_Giulietta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Spettacolo"/>
+        <theatre-show:Situato rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Retroscena"/>
+        <theatre-show:id_Genere>G3</theatre-show:id_Genere>
+        <theatre-show:id_Genere>G5</theatre-show:id_Genere>
+        <theatre-show:id_Spettacolo>S2</theatre-show:id_Spettacolo>
+        <id_Genere>G3</id_Genere>
+        <id_Genere>G5</id_Genere>
+        <id_Spettacolo>S2</id_Spettacolo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Ruggiero_palmitessa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Ruggiero_palmitessa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Spettatore"/>
+        <theatre-show:cognome_spettatore>Palmitessa</theatre-show:cognome_spettatore>
+        <theatre-show:id_Spettatore>ID3</theatre-show:id_Spettatore>
+        <theatre-show:nome_spettatore>Ruggiero</theatre-show:nome_spettatore>
+        <cognome_spettatore>Palmitessa</cognome_spettatore>
+        <id_Spettatore>ID3</id_Spettatore>
+        <nome_spettatore>Ruggiero</nome_spettatore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Viva_Garibaldi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Viva_Garibaldi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Spettacolo"/>
+        <theatre-show:Situato rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Retroscena_Sala_3"/>
+        <theatre-show:anno_Produzione>2023</theatre-show:anno_Produzione>
+        <theatre-show:id_Genere>G2</theatre-show:id_Genere>
+        <theatre-show:id_Genere>G4</theatre-show:id_Genere>
+        <theatre-show:id_Spettacolo>S3</theatre-show:id_Spettacolo>
+        <theatre-show:ora_in_Scena>16.00</theatre-show:ora_in_Scena>
+        <id_Genere>G2</id_Genere>
+        <id_Genere>G4</id_Genere>
+        <id_Spettacolo>S3</id_Spettacolo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Zhoran -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Zhoran">
+        <rdf:type rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Spettacolo"/>
+        <theatre-show:Situato rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Retroscena_Sala_2"/>
+        <theatre-show:id_Genere>G3</theatre-show:id_Genere>
+        <theatre-show:id_Spettacolo>S4</theatre-show:id_Spettacolo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#azione -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#azione">
+        <rdf:type rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Genere"/>
+        <theatre-show:id_Genere>G1</theatre-show:id_Genere>
+        <id_Genere>G1</id_Genere>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#comico -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#comico">
+        <rdf:type rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Genere"/>
+        <theatre-show:id_Genere>G2</theatre-show:id_Genere>
+        <id_Genere>G2</id_Genere>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#dramma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#dramma">
+        <rdf:type rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Genere"/>
+        <id_Genere>G3</id_Genere>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#giovanni_storti -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#giovanni_storti">
+        <rdf:type rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Spettatore"/>
+        <theatre-show:cognome_spettatore>Storti</theatre-show:cognome_spettatore>
+        <theatre-show:id_Spettatore>Id2</theatre-show:id_Spettatore>
+        <theatre-show:nome_spettatore>Giovanni</theatre-show:nome_spettatore>
+        <cognome_spettatore>Storti</cognome_spettatore>
+        <id_Spettatore>ID2</id_Spettatore>
+        <nome_spettatore>Giovanni</nome_spettatore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#giuseppe_ciciriello -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#giuseppe_ciciriello">
+        <rdf:type rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Attore"/>
+        <theatre-show:haRecitato rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Viva_Garibaldi"/>
+        <theatre-show:haRecitato rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Zhoran"/>
+        <theatre-show:cognome_attore>Ciciriello</theatre-show:cognome_attore>
+        <theatre-show:nome_attore>Giuseppe</theatre-show:nome_attore>
+        <cognome_attore>ciciriello</cognome_attore>
+        <haRecitato rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Viva_Garibaldi"/>
+        <nome_attore>giuseppe</nome_attore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#mario_rossi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#mario_rossi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Attore"/>
+        <theatre-show:haRecitato rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Romeo_e_Giulietta"/>
+        <theatre-show:cognome_attore>Rossi</theatre-show:cognome_attore>
+        <theatre-show:nome_attore>Mario</theatre-show:nome_attore>
+        <haRecitato rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Romeo_e_Giulietta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#mirko_lodedo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#mirko_lodedo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Direttore"/>
+        <theatre-show:haDiretto rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Charlot"/>
+        <theatre-show:cognome_direttore>Lodedo</theatre-show:cognome_direttore>
+        <theatre-show:nome_direttore>Mirko</theatre-show:nome_direttore>
+        <cognome_direttore>lodedo</cognome_direttore>
+        <haDiretto rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Charlot"/>
+        <nome_direttore>mirko</nome_direttore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#musical -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#musical">
+        <rdf:type rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Genere"/>
+        <theatre-show:id_Genere>G4</theatre-show:id_Genere>
+        <id_Genere>G4</id_Genere>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#serena_callia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#serena_callia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Attore"/>
+        <theatre-show:haRecitato rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Romeo_e_Giulietta"/>
+        <theatre-show:cognome_attore>Callia</theatre-show:cognome_attore>
+        <theatre-show:nome_attore>Serena</theatre-show:nome_attore>
+        <haRecitato rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Romeo_e_Giulietta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#tragedia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#tragedia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Genere"/>
+        <theatre-show:id_Genere>g5</theatre-show:id_Genere>
+        <id_Genere>G5</id_Genere>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#william_shakespear -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#william_shakespear">
+        <rdf:type rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Direttore"/>
+        <theatre-show:haDiretto rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Romeo_e_Giulietta"/>
+        <theatre-show:cognome_direttore>Shakespear</theatre-show:cognome_direttore>
+        <theatre-show:nome_direttore>William</theatre-show:nome_direttore>
+        <cognome_direttore>shakespear</cognome_direttore>
+        <haDiretto rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Romeo_e_Giulietta"/>
+        <nome_direttore>William</nome_direttore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Voto"/>
+        <theatre-show:id_Spettacolo>S1</theatre-show:id_Spettacolo>
+        <theatre-show:id_Spettatore>ID1</theatre-show:id_Spettatore>
+        <theatre-show:voto>5</theatre-show:voto>
+        <id_Spettacolo>S1</id_Spettacolo>
+        <id_Spettatore>ID1</id_Spettatore>
+        <voto>5</voto>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/flaviopalma/ontologies/2024/0/theatre-show#Voto"/>
+        <theatre-show:id_Spettacolo>S2</theatre-show:id_Spettacolo>
+        <theatre-show:id_Spettatore>ID3</theatre-show:id_Spettatore>
+        <theatre-show:voto>3</theatre-show:voto>
+        <id_Spettacolo>S2</id_Spettacolo>
+        <id_Spettatore>ID3</id_Spettatore>
+        <voto>3</voto>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
