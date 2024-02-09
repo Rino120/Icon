@@ -1,20 +1,16 @@
 import csv
-from fuzzywuzzy import fuzz  # Libreria per calcolare la similarità tra stringhe
-from gensim.parsing.preprocessing import remove_stopwords  # Rimuove le parole comuni che non aggiungono significato
-from PIL import Image  # Per lavorare con immagini
+from fuzzywuzzy import fuzz
+from gensim.parsing.preprocessing import remove_stopwords
+from PIL import Image
 
 def show_planimetry():
     """
     Mostra l'immagine della planimetria.
     """
-    try:
-        im = Image.open("./img/planimetry.png")
-        im.show()
-    except Exception as e:
-        print("Si è verificato un errore nell'apertura dell'immagine:", e)
+    im = Image.open("../img/Planimetria_Teatro.png")
+    im.show()
 
-
-def find_opera(opera):
+def find_opera(idopera):
     """
     Trova un'opera nel database di opere.
     
@@ -25,59 +21,67 @@ def find_opera(opera):
         list: Informazioni sull'opera trovato.
     """
     # Apre il file CSV contenente le opere
-    csv_file = csv.reader(open('./Opere.csv', "r", encoding="utf8"), delimiter=",")
-    max = 0
+    csv_file = csv.reader(open('./dataset/Opere.csv', "r", encoding="utf-8"), delimiter=",")
+    max_similarity = 0
     ris = None
     # Itera su ogni riga del file CSV
     for row in csv_file:
+        # Rimuove le stopwords solo se idopera è una stringa
+        if isinstance(idopera, str):
+            idopera_processed = remove_stopwords(idopera.lower().replace(",", " "))
+        else:
+            idopera_processed = idopera
         # Calcola la similarità tra il nome dell'opera cercato e il nome dell'opera nella riga attuale
-        similarity = fuzz.ratio(remove_stopwords(opera.lower().replace(",", " ")),
-                                remove_stopwords(row[1].lower().replace(",", " ")))
-        # Se la similarità supera una soglia del 60% e è maggiore della similarità massima trovata finora
-        if similarity > 60 and similarity > max:
-            max = similarity  # Aggiorna la similarità massima
-            ris = row  # Aggiorna le informazioni sull'opera
+        similarity = fuzz.ratio(idopera_processed, remove_stopwords(row[1].lower().replace(",", " ")))
+        if similarity > 70 and similarity > max_similarity:
+            max_similarity = similarity
+            ris = row
     return ris
 
-def get_opera_id(opera):
+def get_opera_id(idopera):
     """
     Ottiene l'ID di un'opera a partire dal suo nome.
     
     Args:
-        opera (str): Il nome dell'opera.
+        idopera (str): Il nome dell'opera.
         
     Returns:
         str: L'ID dell'opera.
     """
-    ris = find_opera(opera)[0]
-    return ris
+    opera_info = find_opera(idopera)
+    if opera_info is not None:
+        return opera_info[0]
+    else:
+        return None
 
-def get_opera_name(opera):
+def get_opera_name(idopera):
     """
     Ottiene il nome di un opera a partire dal suo ID.
     
     Args:
-        opera (str): L'ID del opera.
+        idopera (int32): L'ID del opera.
         
     Returns:
         str: Il nome del opera.
     """
-    ris = find_opera(opera)[1]
+    ris = find_opera(idopera)[1]
     return ris
 
-def get_rack(opera_id):
+def get_rack(idopera):
     """
     Ottiene il numero della sala dell'opera a partire dal suo ID.
     
     Args:
-        opera_id (str): L'ID dell'opera.
-        
+        idopera (int32): L'ID dell'opera.
+
     Returns:
         int: Il numero della sala.
     """
-    # Calcola il numero della sala utilizzando l'ID del film
-    n_rack = int(float(opera_id) / 3520) + 1
-    return n_rack
+    if idopera is not None:
+        n_room = int(float(idopera) / 50) + 1
+        return n_room
+    else:
+        return None
 
 def get_nodes(room):
     """
@@ -89,7 +93,6 @@ def get_nodes(room):
     Returns:
         int: Il numero di nodi.
     """
-    # Assegna un numero di nodi in base al numero della sala
     if room == 1:
         return 5
     elif room == 2:
@@ -107,4 +110,5 @@ def get_nodes(room):
     elif room == 8:
         return 14
     else:
-        return None  # Restituisce None se la sala specificata non è gestita
+        return None
+# Restituisce None se la sala specificata non è gestita

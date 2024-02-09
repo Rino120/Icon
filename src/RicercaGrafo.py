@@ -80,6 +80,8 @@ def lowest_cost_first(graph, start, end):
                 new_path = path.copy()
                 new_path.append((node2, cost))
                 queue.append(new_path)
+                
+    return None
 
 # Crea il grafo pesato
 def setup_graph():
@@ -92,15 +94,15 @@ def setup_graph():
 
     # Definizione degli archi e dei loro pesi
     a = [('0', '1', 3), ('0', '4', 2), ('0', '7', 3), ('1', '2', 5), ('2', '3', 2), ('4', '5', 3), ('4', '6', 3),
-         ('7', '8', 5), ('8', '9', 2), ('4', '10', 5), ('10', '11', 3), ('10', '15', 2), ('10', '13', 3), ('11', '12', 5),
-         ('12', '17', 2), ('17', '16', 5), ('15', '16', 2), ('15', '18', 3), ('18', '19', 5), ('19', '14', 2),
-         ('14', '13', 5)]
+        ('7', '8', 5), ('8', '9', 2), ('4', '10', 5), ('10', '11', 3), ('10', '15', 2), ('10', '13', 3), ('11', '12', 5),
+        ('12', '17', 2), ('17', '16', 5), ('15', '16', 2), ('15', '18', 3), ('18', '19', 5), ('19', '14', 2),
+        ('14', '13', 5)]
 
     edge = []
     weights = []
 
     # Generazione archi e pesi
-    for i in range(20):
+    for i in range(21):
 
         for j in range(2):
             k = 2
@@ -145,3 +147,89 @@ def find_solution(graph, start):
         if search_method == 1:
             solution = bfs(graph, start, goal)
             print("La soluzione è:\n" + str(solution))
+        elif search_method == 2:
+            # Esegue una ricerca utilizzando il Lowest Cost First Search
+            solution = lowest_cost_first(graph, 0, goal)
+            print("Soluzione:\n")
+            print([x[0] for x in solution])
+            # Stampa il costo della soluzione trovata
+            print("Costo della soluzione:", path_cost(solution)[0])
+        else:
+            # Stampa un messaggio se la risposta inserita non è corretta
+            print("Risposta non corretta")
+
+    return solution
+
+
+def print_solution(graph, solution, weights, color):
+    """
+    Visualizza un'immagine della soluzione della ricerca sul grafo
+    :param color: colore della soluzione stampata
+    :param weights: lista dei pesi del grafo
+    :param graph: grafo da stampare
+    :param solution: soluzione da evidenziare nell'immagine
+    :return:
+    """
+    if solution is None:
+        print("La soluzione è vuota.")
+        return
+    
+    edges = graph.get_edgelist()
+    g = Graph(edges)
+    g.vs["color"] = "yellow"
+    g.es["label"] = weights
+
+    if solution:
+        try:
+            vertex_set = set(solution)
+            sol_edges = g.vs.select(vertex_set)
+        except TypeError:
+            print("Errore: Non è possibile selezionare i vertici con il set fornito.")
+            print("Soluzione:", solution)
+            print("Set dei vertici:", vertex_set)
+            return
+
+        if sol_edges:
+            sol_edges["color"] = color
+            g.vs["label"] = vertex_values
+        else:
+            print("Errore: Nessun vertice trovato nella soluzione.")
+            print("Soluzione:", solution)
+    else:
+        print("Errore: La soluzione è vuota.")
+
+    g.layout(layout='auto')
+    plot(g, vertex_label=vertex_values)
+
+
+
+def research(titles):
+    """
+    Stampa i percorsi basati sul Lowest Cost First per trovare tutte le opere in sala
+
+    :param titles : opere da cercare
+    """
+    # Imposta e stampa il grafo
+    graph, edges, weights = setup_graph()
+    g = Graph(edges)
+    plot(g, vertex_label=vertex_values)
+
+    # Stampa le soluzioni sul grafo
+    colors = ["red", "blue", "green", "brown", "purple"]
+    racks = []
+    for titolo in titles:
+        # Popola la lista delle sale con i nodi relativi al grafo
+        racks.append(Utils.get_nodes(Utils.get_rack(Utils.get_opera_id(titles))))
+
+    start_node = 0
+
+    for rack, titolo, color in zip(racks, titles, colors):
+        # Stampa il percorso di ricerca Lowest Cost First da opera a opera
+        sol = lowest_cost_first(graph, start_node, rack)
+        start_node = rack
+        if sol is None:
+            print(f"Nessun percorso trovato per la ricerca '{titolo}'")
+        else:
+            solution = [s[0] for s in sol]
+            input("Premi [invio] per stampare il percorso per '{}'".format(titolo))
+            print_solution(graph, solution, weights, color)
