@@ -8,6 +8,7 @@ import RicercaGrafo
 import Utils
 
 
+<<<<<<< HEAD
 def _fuzzy_matching(hashmap, fav_opera):
     """
     restituisce la corrispondenza più vicina tramite rapporto fuzzy.
@@ -39,11 +40,17 @@ def _fuzzy_matching(hashmap, fav_opera):
         return match_tuple[0][1]
 
 
+=======
+>>>>>>> 57bd5057fe71bb0d0c4aa5aa5a45360c82b8306d
 class KnnRecommender:
     def __init__(self):
         self.path_opera = './dataset/Opere.csv'
         self.path_rating = './dataset/Rating.csv'
+<<<<<<< HEAD
         self.opera_rating_thres = 4
+=======
+        self.opera_rating_thres = 10
+>>>>>>> 57bd5057fe71bb0d0c4aa5aa5a45360c82b8306d
         self.user_rating_thres = 10
         self.model = NearestNeighbors()
         self.model.set_params(**{
@@ -60,15 +67,25 @@ class KnnRecommender:
         # leggi i dati
         df_opere = pd.read_csv(
             os.path.join(self.path_opera),
+<<<<<<< HEAD
             usecols=['idopera', 'titolo', 'genere'],
             dtype={'idopera': 'int32', 'titolo': 'str', 'genere': 'str'})
+=======
+            usecols=['idopera', 'titolo','genere'],
+            dtype={'idopera': 'int32', 'titolo': 'str', 'genere' : 'str'})
+
+>>>>>>> 57bd5057fe71bb0d0c4aa5aa5a45360c82b8306d
 
         df_rating = pd.read_csv(
             os.path.join(self.path_rating),
             usecols=['idutente', 'idopera', 'valutazione'],
             dtype={'idutente': 'int32', 'idopera': 'int32', 'valutazione': 'float32'})
 
+<<<<<<< HEAD
         # filtra gli utenti che hanno valutato meno di 4 opere e le opere con meno di 10 valutazioni
+=======
+        # filtra gli utenti che hanno valutato meno di 10 opere e le opere con meno di 10 valutazioni
+>>>>>>> 57bd5057fe71bb0d0c4aa5aa5a45360c82b8306d
         df_opere_cnt = pd.DataFrame(df_rating.groupby('idopera').size(), columns=['count'])
         popular_opere = list(df_opere_cnt.query('count >= @self.opera_rating_thres').index)
         opere_filter = df_rating.idopera.isin(popular_opere).values
@@ -90,8 +107,43 @@ class KnnRecommender:
         opera_user_mat_sparse = csr_matrix(opera_user_mat.values)
         return opera_user_mat_sparse, hashmap
 
+<<<<<<< HEAD
     def _inference(self, model, data, hashmap,
                    fav_opera, n_recommendations):
+=======
+    def _fuzzy_matching(self, hashmap, fav_opera):
+        """
+        restituisce la corrispondenza più vicina tramite rapporto fuzzy.
+        Se non viene trovata alcuna corrispondenza, restituisce None
+
+        parametri:
+
+        hashmap: dict, mappa il titolo dell'opera all'indice dell'opera nei dati
+
+        fav_opere: str, nome dell'opera inserita dall'utente
+
+        return:
+
+        indice della corrispondenza più vicina
+        """
+        match_tuple = []
+        # ottieni la corrispondenza
+        for titolo, idx in hashmap.items():
+            ratio = fuzz.ratio(remove_stopwords(titolo.lower().replace(",", " ")),
+                                remove_stopwords(fav_opera.lower().replace(",", " ")))
+            if ratio >= 60:
+                match_tuple.append((titolo, idx, ratio))
+        # ordina
+        match_tuple = sorted(match_tuple, key=lambda x: x[2])[::-1]
+        if not match_tuple:
+            print('Nessun risultato trovato')
+        else:
+            print('Risultati trovati: \n' + str([x[0] for x in match_tuple]))
+            return match_tuple[0][1]
+
+    def _inference(self, model, data, hashmap,
+                fav_opera, n_recommendations):
+>>>>>>> 57bd5057fe71bb0d0c4aa5aa5a45360c82b8306d
         """
         restituisce le prime n raccomandazioni di opere simili in base all'opera inserita dall'utente
 
@@ -116,7 +168,11 @@ class KnnRecommender:
         # ottieni l'indice dell'opera di input
         print('La tua opera è:', fav_opera)
         try:
+<<<<<<< HEAD
             idx = _fuzzy_matching(hashmap, fav_opera)
+=======
+            idx = self._fuzzy_matching(hashmap, fav_opera)
+>>>>>>> 57bd5057fe71bb0d0c4aa5aa5a45360c82b8306d
             # inferenza
             distances, indices = model.kneighbors(
                 data[idx],
@@ -155,11 +211,16 @@ class KnnRecommender:
             self.model, opera_user_mat_sparse, hashmap,
             fav_opera, n_recommendations)
         # stampa i risultati
+<<<<<<< HEAD
         opera_lista = []
+=======
+        opera_list = []
+>>>>>>> 57bd5057fe71bb0d0c4aa5aa5a45360c82b8306d
         reverse_hashmap = {v: k for k, v in hashmap.items()}
         print('Raccomandazioni per: ' + fav_opera)
         for i, (idx, dist) in enumerate(raw_recommends):
             print('{0}: {1}, con una distanza '
+<<<<<<< HEAD
                   'di {2}'.format(i + 1, reverse_hashmap[idx], dist))
             opera_lista.append(reverse_hashmap[idx])
         return opera_lista
@@ -198,3 +259,21 @@ if __name__ == '__main__':
             break
         else:
             print("Scelta non valida. Riprova.")
+=======
+                'di {2}'.format(i + 1, reverse_hashmap[idx], dist))
+            opera_list.append(reverse_hashmap[idx])
+        return opera_list
+
+
+if __name__ == '__main__':
+    input("Premi [invio] per mostrare la planimetria del teatro sociale")
+    Utils.show_planimetry()
+    opera_name = input('Inserisci il nome dell\'opera preferita:\n')
+    top_n = 5
+    recommender = KnnRecommender()
+    recommendation = recommender.make_recommendations(opera_name, top_n)
+    if recommendation is not None:
+        RicercaGrafo.research(recommendation)
+    else:
+        print("Non trovato")
+>>>>>>> 57bd5057fe71bb0d0c4aa5aa5a45360c82b8306d

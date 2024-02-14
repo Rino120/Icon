@@ -84,6 +84,8 @@ def lowest_cost_first(graph, start, end):
                 new_path = path.copy()
                 new_path.append((node2, cost))
                 queue.append(new_path)
+                
+    return None
 
     return None
 
@@ -98,15 +100,26 @@ def setup_graph():
     """
 
     # Definizione degli archi e dei loro pesi
+<<<<<<< HEAD
     a = [('0', '1', 3), ('0', '4', 3), ('0', '6', 2), ('1', '2', 5), ('2', '3', 2), ('4', '5', 5), ('6', '7', 5),
          ('7', '8', 2), ('8', '9', 3), ('9', '10', 5), ('10', '11', 2),
          ('8', '12', 3), ('12', '13', 5), ('3', '11', 9)]
+=======
+    a = [('0', '1', 3), ('0', '4', 2), ('0', '7', 3), ('1', '2', 5), ('2', '3', 2), ('4', '5', 3), ('4', '6', 3),
+        ('7', '8', 5), ('8', '9', 2), ('4', '10', 5), ('10', '11', 3), ('10', '15', 2), ('10', '13', 3), ('11', '12', 5),
+        ('12', '17', 2), ('17', '16', 5), ('15', '16', 2), ('15', '18', 3), ('18', '19', 5), ('19', '14', 2),
+        ('14', '13', 5)]
+>>>>>>> 57bd5057fe71bb0d0c4aa5aa5a45360c82b8306d
 
     edge = []
     weights = []
     k = 0
     # Generazione archi e pesi
+<<<<<<< HEAD
     for i in range(14):
+=======
+    for i in range(21):
+>>>>>>> 57bd5057fe71bb0d0c4aa5aa5a45360c82b8306d
 
         for j in range(2):
             k = 2
@@ -182,12 +195,20 @@ def print_solution(graph, solution, weights, color):
     if solution is None:
         print("La soluzione è vuota.")
         return
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 57bd5057fe71bb0d0c4aa5aa5a45360c82b8306d
     edges = graph.get_edgelist()
     g = Graph(edges)
     g.vs["color"] = "yellow"
     g.es["label"] = weights
+<<<<<<< HEAD
     vertex_set = ''
+=======
+
+>>>>>>> 57bd5057fe71bb0d0c4aa5aa5a45360c82b8306d
     if solution:
         try:
             vertex_set = set(solution)
@@ -211,11 +232,20 @@ def print_solution(graph, solution, weights, color):
     plot(g, vertex_label=vertex_values)
 
 
+<<<<<<< HEAD
 def research(titoli):
     """
     Stampa i percorsi basati sul Lowest Cost First per trovare tutte le opere in sala
 
     :param titoli : opere da cercare
+=======
+
+def research(titles):
+    """
+    Stampa i percorsi basati sul Lowest Cost First per trovare tutte le opere in sala
+
+    :param titles : opere da cercare
+>>>>>>> 57bd5057fe71bb0d0c4aa5aa5a45360c82b8306d
     """
     # Imposta e stampa il grafo
     graph, edges, weights = setup_graph()
@@ -223,6 +253,7 @@ def research(titoli):
     plot(g, vertex_label=vertex_values)
 
     # Stampa le soluzioni sul grafo
+<<<<<<< HEAD
     colors = ["red", "green", "blue", "cyan", "purple"]
     sale = []
     for titolo in titoli:
@@ -235,6 +266,20 @@ def research(titoli):
         # Stampa il percorso di ricerca Lowest Cost First da opera a opera
         sol = lowest_cost_first(graph, start_node, sala)
         start_node = sala
+=======
+    colors = ["red", "blue", "green", "brown", "purple"]
+    racks = []
+    for titolo in titles:
+        # Popola la lista delle sale con i nodi relativi al grafo
+        racks.append(Utils.get_nodes(Utils.get_rack(Utils.get_opera_id(titles))))
+
+    start_node = 0
+
+    for rack, titolo, color in zip(racks, titles, colors):
+        # Stampa il percorso di ricerca Lowest Cost First da opera a opera
+        sol = lowest_cost_first(graph, start_node, rack)
+        start_node = rack
+>>>>>>> 57bd5057fe71bb0d0c4aa5aa5a45360c82b8306d
         if sol is None:
             print(f"Nessun percorso trovato per la ricerca '{titolo}'")
         else:
