@@ -1,0 +1,166 @@
+﻿idopera,titolo,genere
+<<<<<<< HEAD
+1,Sogno di una notte di mezza estate,Commedia
+2,Il mercante di Venezia,Dramma
+3,Romeo e Giulietta,Tragedia
+4,La dodicesima notte,Commedia
+5,Otello,Tragedia
+6,La bisbetica domata,Commedia
+7,Macbeth,Tragedia
+8,Amleto,Tragedia
+9,Le allegre comari di Windsor,Commedia
+10,La tempesta,Commedia
+11,Il misantropo,Commedia
+12,Cyrano de Bergerac,Dramma|Romantico
+13,Edipo re,Tragedia
+14,Antigone,Tragedia
+15,Medea,Tragedia
+16,Le Troiane,Tragedia
+17,Prometeo incatenato,Tragedia
+18,Elettra,Tragedia
+19,La notte dei re,Commedia
+20,Il Tartufo,Commedia
+21,Il malato immaginario,Commedia
+22,Don Giovanni,Opera
+23,Le nozze di Figaro,Opera
+24,Cosi fan tutte,Opera
+25,Il flauto magico,Opera
+26,La Traviata,Opera
+27,La Bohème,Opera
+28,Madama Butterfly,Opera
+29,Rigoletto, Opera
+30,Il barbiere di Siviglia,Opera|Comico
+31,La Cenerentola,Opera|Comico
+32,La gazza ladra,Opera
+33,Il Corsaro Nero,Dramma
+34,I promessi sposi,Dramma
+35,Il gabbiano,Dramma
+36,Tre sorelle,Dramma
+37,Il giardino dei ciliegi,Dramma
+38,Platonov,Dramma
+39,Anna Karenina,Dramma
+40,Il gioco delle parti,Dramma
+41,Il servitore di due padroni,Commedia
+42,Il malpensante,Commedia
+43,La cena delle beffe,Dramma
+44,Il cavaliere della rosa,Commedia|Musical
+45,Il Pipistrello,Operetta
+46,Il lago dei cigni,Balletto
+47,La bella addormentata,Balletto
+48,Lo schiaccianoci,Balletto
+49,Giselle,Balletto
+50,La Bayadère,Balletto
+51,Don Chisciotte,Balletto
+52,Morte Da Dietro,Balletto
+53,Il lago dei cani,Balletto
+54,Il Mandorlaro,Balletto
+55,Teresaaaaa,Balletto
+56,La Brianza,Balletto
+57,Don Mannio,Balletto
+58,La Seppia Bruna,Balletto
+59,La cena di Natale,Commedia
+60,Il compleanno,Commedia
+61,Il segreto di Babbo Natale,Fiaba
+62,Un Natale da ricordare,Commedia
+63,La festa di Capodanno, Commedia
+64,La notte di San Silvestro,Commedia
+65,La storia di un viaggio,Avventura
+66,Il mistero della vecchia casa,Giallo
+67,Il ladro di sogni,Fantasia
+68,Il segreto del faro,Mistero
+69,La dama misteriosa,Thriller
+70,La città perduta,Avventura
+71,Il viaggio nel tempo,Fantascienza
+72,Il circo magico,Famiglia
+73,Il teatro delle ombre,Fantasy
+74,Il regno incantato,Fiaba
+75,Il mistero dell'isola deserta,Avventura
+76,La notte delle stelle cadenti,Romantico
+77,Il circo degli animali parlanti,Famiglia
+78,La foresta magica,Fantasia
+79,Il segreto dell'orologio magico,Mistero
+80,Il mistero del libro antico,Giallo
+81,Il castello delle illusioni,Fantasia
+82,Il tesoro nascosto,Avventura
+83,Il viaggio nel mondo delle fiabe,Fiaba
+84,La leggenda del drago,Fantasia
+85,Il regno delle meraviglie,Fiaba
+86,La terra dei giganti,Fantasia
+87,Il libro delle avventure,Avventura
+88,La storia del vecchio orologio,Mistero
+89,Il segreto della porta magica, Fantasia
+90,La notte delle streghe,Horror
+91,Il regno dei fantasmi,Mistero
+92,La leggenda della luna blu,Fantasy
+93,Il castello incantato,Fiaba
+94,Il giardino segreto,Dramma
+95,La città degli angeli,Dramma
+96,Il teatro delle illusioni,Fantasia
+97,Il mistero dell'antica civiltà,Avventura
+98,La notte dei maghi,Fantasy
+99,Il regno dei sogni,Fiaba
+100,La leggenda dell'albero magico,Fantasy
+101,Il libro dei segreti,Fantasia
+102,La storia del vecchio burattinaio,Dramma
+103,Il segreto della lanterna magica,Fantasy
+104,La notte delle creature fantastiche,Fantasia
+105,Il viaggio nel mondo delle ombre,Fantasy
+106,Il castello dei fantasmi,Horror
+107,Il regno delle fate,Fantasy
+108,La leggenda del cigno bianco,Fantasy
+109,Il mistero della porta dimensionale,Fantascienza
+110,La notte delle storie perdute,Fantasy
+111,Il regno dei draghi,Fantasy
+112,La leggenda dell'ultima stella,Fantasy
+=======
+1,Amleto,Tragedia
+2,La Traviata,Opera
+3,Il Tartufo,Commedia
+4,Otello,Tragedia
+5,La Morte di Ivan ll'ic,Dramma
+6,La Locandiera,Commedia
+7,Cyrano de Bergerac,Commedia
+8,Antigone,Tragedia
+9,Il Malato Immaginario,Commedia
+10,Il Gabbiano,Dramma
+11,Il Re Lear,Tragedia
+12,La BohŠme,Opera
+13,Le Preciuse Ridicole,Commedia
+14,Macbeth,Tragedia
+15,La Serva Amorosa,Commedia
+16,Il Trovatore,Opera
+17,Le Bourgeois Gentilhomme,Commedia
+18,La Notte dei Re,Commedia
+19,La Cenerentola,Opera
+20,Il Misantropo,Commedia
+21,La Forma dell'Acqua,Dramma|Fantastico
+22,Intrighi e Segreti,Dramma|Politico
+23,Il Circo dei Sogni,Fantastico
+24,L'Ultima Canzone,Dramma|Romantico
+25,Il Giardino Segreto,Dramma|Familiare
+26,Il Canto del Cigno Nero,Fantastico|Oscuro
+27,Coppie in Crisi,Commedia
+28,Riflessi nell'Acqua,Dramma|Storico
+29,Il Silenzio delle Stelle,Dramma
+30,La Follia degli Dei,Mitologia
+31,Romeo e Giulietta,Dramma|Romantico
+32,L'Ultimo Vampiro,Gotico
+33,Il Labirinto delle Ombre,Fantastico
+34,Il Fuoco e la Fiamma,Fantastico|Romantico
+35,L'Isola dei Sogni Perduti,Fantastico
+36,Il Gioco degli Specchi,Fantastico
+37,La Musica del Silenzio,Thriller
+38,Il Segreto delle Stelle Cadenti,Dramma|Fantastico
+39,Il Signore della Tempesta,Fantastico|Epico
+40,Il Rumore delle Onde,Tragico|Romantico
+41,La Casa di Bernarda Alba,Tragedia
+42,Come Vi Piace,Commedia|Romantico
+43,Il Grande Gatsby,Dramma|Romantico
+44,Un Nemico del Popolo,Dramma|Sociale
+45,Pygmalion,Commedia
+46,Il Lutto Si Addice ad Elettra,Tragedia
+47,Sei Personaggi in Cerca d'Autore,Dramma
+48,La Dodicesima Notte,Commedia|Romantico
+49,I Tre Moschettieri,Avventura
+50,La Scuola delle Mogli,Commedia
+>>>>>>> 57bd5057fe71bb0d0c4aa5aa5a45360c82b8306d
