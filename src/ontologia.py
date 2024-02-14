@@ -44,8 +44,7 @@ print("Lista dei Voti nell'ontologia:\n")
 voti = onto.search(is_a=onto.Voto)
 print(voti, "\n")
 
-
-#esempi di query
+# esempi di query
 print("Lista degli spettacoli di genere commedia:\n")
-film = onto.search(is_a = onto.Spettacolo, haGenere = onto.search(is_a = onto.commedia))
+film = onto.search(is_a=onto.Spettacolo, haGenere=onto.search(is_a=onto.commedia))
 print(film, "\n")
